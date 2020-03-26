@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Надежда Миткалева](https://up.htmlacademy.ru/adaptive/19/user/892071).
-* Наставник: [Альбина Токарчук] (https://htmlacademy.ru/profile/id167491).
+* Наставник: [Альбина Токарчук](https://htmlacademy.ru/profile/id167491).
 
 ---
 
