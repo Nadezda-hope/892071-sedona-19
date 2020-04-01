@@ -12,7 +12,7 @@
           <ul class="main-menu__list site-list">
             <li class="site-list__item"><a href="sedona-index.html">Главная</a></li>
             <li class="site-list__item"><a href="sedona-photo.html">Фото и видео</a></li>
-            <li class="site-list__item site-list__item--active"><a href="#">Форма отзыва</a></li>
+            <li class="site-list__item site-list__item--active"><a>Форма отзыва</a></li>
             <li class="site-list__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
           </ul>
         </div>
@@ -21,16 +21,17 @@
         <img class="page-header__logo-image" src="https://via.placeholder.com/102x83" width="102" height="83" alt="Логотип Седоны">
       </a>
     </header>
+
     <main class="inner-main">
       <section class="decoration">
         <div class="decoration__wrapper">
         </div>
       </section>
 
-      <section class="form-header">
-        <div class="form-header__wrapper">
-          <h2 class="form-header__title">Оставьте свой отзыв</h2>
-          <p class="form-header__text">
+      <section class="page-subtitle">
+        <div class="page-subtitle__wrapper">
+          <h2 class="page-subtitle__title">Оставьте свой отзыв</h2>
+          <p class="page-subtitle__text">
             Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
           </p>
         </div>
@@ -139,10 +140,9 @@
         <div class="form-review">
           <div class="form-review__wrapper">
             <label class="form-review__title">Опишите свои эмоции:
-              <textarea class="form-review__textarea" name="review">
-                Опишите подробно все свои восторги
+              <textarea class="form-review__textarea" name="review" placeholder="Опишите подробно все свои восторги">
               </textarea>
-          </legend>
+            </label>
           </div>
         </div>
         <button class="form__button" type="submit">Отправить отзыв</button>
@@ -157,7 +157,7 @@
           </div>
           <ul class="links__social social">
             <li class="social__item">
-              <a class="social__link social__link--twetter" href="#">Twitter</a>
+              <a class="social__link social__link--twitter" href="#">Twitter</a>
             </li>
             <li class="social__item">
               <a class="social__link social__link--facebook" href="#">Facebook</a>
@@ -166,7 +166,7 @@
               <a class="social__link social__link--youtube" href="#">Youtube</a>
             </li>
           </ul>
-          <div class="links__copyright copiright">
+          <div class="links__copyright copyright">
             <p class="copyright__text">Разработано</p>
             <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
           </div>
@@ -174,21 +174,21 @@
       </section>
     </footer>
 
-    <section class="popup-error">
-      <h3 class="popup-error__title">Что-то пошло не так</h3>
-      <p class="popup-error__text">
+    <section class="popup popup--error">
+      <h3 class="popup__title">Что-то пошло не так</h3>
+      <p class="popup__text">
         Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
       </p>
-      <button class="form__button form__button--error" type="button">Ok</button>
+      <button class="popup__button popup__button--error" type="button">Ok</button>
     </section>
 
-    <section class="popup-sending">
-      <h3 class="popup-sending__title">Ваш отзыв отправлен!</h3>
-      <p class="popup-sending__text">
+    <section class="popup popup--success">
+      <h3 class="popup__title">Ваш отзыв отправлен!</h3>
+      <p class="popup__text">
         Спасибо за ваше участие, ваш отзыв уже поступил к нам.
         В ближайшее время мы опубликуем его на сайте.
       </p>
-      <button class="form__button form__button--sending" type="button">Закрыть окно</button>
+      <button class="popup__button popup__button--success" type="button">Закрыть окно</button>
     </section>
   </body>
 </html>
