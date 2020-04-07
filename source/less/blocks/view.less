@@ -1,5 +1,12 @@
+.view {
+  background-color: @color_grey;
+}
+
 .view__list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  text-align: center;
 }
 
 .view__item {
@@ -8,4 +15,21 @@
   .view__title {
     .font-title();
   }
+}
+
+.view__item--square {
+  padding: 27px 41px 42px 41px;
+}
+
+.view__title {
+  margin: 0;
+  margin-bottom: 9px;
+}
+
+.view__item--road {
+  padding: 0 56px 41px 56px;
+}
+
+.view__item--tourists {
+  padding: 0 37px 32px 37px;
 }

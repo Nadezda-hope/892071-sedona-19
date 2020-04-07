@@ -1,18 +1,51 @@
 .form {
+  width: 320px;
   font-size: 14px;
   line-height: 26px;
 }
 
-.form-name__list,
-.form-contacts__list,
-.form-impression__list,
-.form-attractions__list {
+.form__list {
   list-style: none;
 }
 
-.form-name,
-.form-contacts,
-.form-impression,
-.form-attractions {
+.form__fieldset {
+  width: 320px;
+  margin: 0;
+  padding: 0;
   border: none;
+}
+
+.form__legend {
+  .font-title();
+  text-align: center;
+}
+
+.form-name__wrapper {
+  padding: 24px 20px 20px 24px;
+}
+
+.form-contacts__wrapper {
+  padding: 24px 20px 20px 28px;
+}
+
+.form-impression__wrapper {
+  padding: 23px 36px 28px 20px;
+}
+
+.form-attractions__wrapper {
+  padding: 23px 40px 25px 18px;
+}
+
+.form-review__wrapper {
+  padding: 23px 22px 51px 20px;
+}
+
+.form__label {
+  .font-title();
+}
+
+.form-review__textarea::placeholder {
+  font-size: 18px;
+  color: #000000;
+  font-weight: bold;
 }
