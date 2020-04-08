@@ -12,6 +12,12 @@
 
 .input-text() {
   background-color: @color_grey;
+  color: #000000;
   border: none;
   overflow: hidden;
+
+  &::placeholder {
+    .font-title();
+    color: #000000;
+  }
 }

@@ -9,24 +9,24 @@
   text-align: center;
 }
 
+.view__title {
+  .font-title();
+  margin: 0;
+  margin-bottom: 9px;
+}
+
 .view__item {
   .font-text();
 
-  .view__title {
-    .font-title();
-    margin: 0;
-    margin-bottom: 9px;
+  &--square {
+    padding: 27px 41px 42px 41px;
   }
-}
 
-.view__item--square {
-  padding: 27px 41px 42px 41px;
-}
+  &--road {
+    padding: 0 56px 41px 56px;
+  }
 
-.view__item--road {
-  padding: 0 56px 41px 56px;
-}
-
-.view__item--tourists {
-  padding: 0 37px 32px 37px;
+  &--tourists {
+    padding: 0 37px 32px 37px;
+  }
 }
