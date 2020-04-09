@@ -1,0 +1,23 @@
+.font-title() {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.font-text() {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+}
+
+.input-text() {
+  background-color: @color_grey;
+  color: #000000;
+  border: none;
+  overflow: hidden;
+
+  &::placeholder {
+    .font-title();
+    color: #000000;
+  }
+}
