@@ -1,5 +1,8 @@
 .form {
+  display: flex;
+  flex-direction: column;
   width: 320px;
+  margin: 0 auto;
   font-size: 14px;
   line-height: 26px;
 }
@@ -22,4 +25,50 @@
 
 .form__label {
   .font-title();
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: 768px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form-name {
+    width: 50%;
+    order: 2;
+  }
+
+  .form-contacts {
+    width: 100%;
+    order: 3;
+  }
+
+  .form-impression {
+    width: 50%;
+    order: 1;
+  }
+
+  .form-attractions {
+    width: 100%;
+    order: 4;
+  }
+
+  .form-review {
+    width: 100%;
+    order: 5;
+  }
+
+  .form__button {
+    order: 6;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: 1200px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }

@@ -1,4 +1,6 @@
 .page-subtitle {
+  width: 320px;
+  margin: 0 auto;
   font-size: 14px;
   line-height: 24px;
 }
@@ -22,5 +24,49 @@
   &--photo {
     padding: 38px 24px 27px 23px;
     text-align: center;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-subtitle {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  .page-subtitle__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .page-subtitle__wrapper {
+    &--form {
+      padding: 69px 170px 66px 170px;
+    }
+
+    &--photo {
+      padding: 64px 170px 56px 170px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-subtitle {
+    width: 1200px;
+    margin: 0 auto;
+  }
+
+  .page-subtitle__title {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .page-subtitle__wrapper {
+    &--form {
+      padding: 108px 381px 66px 380px;
+    }
+
+    &--photo {
+      padding: 107px 387px 51px 385px;
+    }
   }
 }

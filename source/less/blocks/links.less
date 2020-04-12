@@ -1,3 +1,8 @@
+.links {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .links__contacts {
   margin-bottom: 40px;
   font-size: 21px;
@@ -11,4 +16,44 @@
 
 .links__wrapper {
   padding: 31px 85px 35px 84px;
+}
+
+@media (min-width: @tablet-width) {
+  .links {
+    width: 768px;
+  }
+
+  .links__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .links__contacts {
+    margin: 0;
+  }
+
+  .links__social {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .links {
+    width: 1200px;
+  }
+
+  .links__wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .links__contacts {
+    margin: 0;
+  }
+
+  .links__social {
+    margin: 0;
+  }
 }
