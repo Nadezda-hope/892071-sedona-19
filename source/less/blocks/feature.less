@@ -1,6 +1,6 @@
 .feature {
   .font-text();
-  width: 320px;
+  width: @mobile-width;
   margin: 0 auto;
 }
 
@@ -56,6 +56,8 @@
       height: 38px;
       top: 0;
       left: 25px;
+      stroke: @color_blue;
+      fill: @color_blue;
     }
   }
 }
@@ -78,7 +80,7 @@
 
 @media (min-width: @tablet-width) {
   .feature {
-    width: 768px;
+    width: @tablet-width;
   }
 
   .feature__list {
@@ -94,9 +96,6 @@
       padding: 160px 47px 63px 48px;
 
       &::before {
-        content: "";
-        position: absolute;
-        background: url("../img/icon-house.svg") no-repeat;
         background-size: 75px 72px;
         width: 75px;
         height: 72px;
@@ -109,9 +108,6 @@
       padding: 160px 46px 63px 46px;
 
       &::before {
-        content: "";
-        position: absolute;
-        background: url("../img/icon-gift.svg") no-repeat;
         background-size: 64px 75px;
         width: 64px;
         height: 75px;
@@ -124,9 +120,6 @@
       padding: 160px 44px 63px 44px;
 
       &::before {
-        content: "";
-        position: absolute;
-        background: url("../img/icon-burger.svg") no-repeat;
         background-size: 77px 68px;
         width: 77px;
         height: 68px;
@@ -143,7 +136,7 @@
 
 @media (min-width: @desktop-width) {
   .feature {
-    width: 1200px;
+    width: @desktop-width;
   }
 
   .feature__list {
@@ -158,9 +151,6 @@
       padding: 160px 83px 75px 71px;
 
       &::before {
-        content: "";
-        position: absolute;
-        background: url("../img/icon-house.svg") no-repeat;
         background-size: 75px 72px;
         width: 75px;
         height: 72px;
@@ -173,9 +163,6 @@
       padding: 160px 83px 53px 56px;
 
       &::before {
-        content: "";
-        position: absolute;
-        background: url("../img/icon-gift.svg") no-repeat;
         background-size: 64px 75px;
         width: 64px;
         height: 75px;
@@ -188,9 +175,6 @@
       padding: 160px 83px 93px 92px;
 
       &::before {
-        content: "";
-        position: absolute;
-        background: url("../img/icon-burger.svg") no-repeat;
         background-size: 77px 68px;
         width: 77px;
         height: 68px;

@@ -23,13 +23,13 @@
 }
 
 .popup--error {
-  width: 320px;
+  width: @mobile-width;
   min-height: 280px;
   margin: 0 auto;
 }
 
 .popup--success {
-  width: 320px;
+  width: @mobile-width;
   min-height: 323px;
   margin: 0 auto;
 }
@@ -38,12 +38,10 @@
   .popup__wrapper {
     &--error {
       padding: 64px 62px 60px 61px;
-      text-align: center;
     }
 
     &--success {
       padding: 64px 114px 44px 112px;
-      text-align: center;
     }
   }
 
@@ -59,16 +57,16 @@
     line-height: 24px;
   }
 
-  .popup--error {
-    width: 400px;
-    min-height: 347px;
-    margin: 0 auto;
-  }
+  .popup {
+    &--error {
+      width: 400px;
+      min-height: 347px;
+    }
 
-  .popup--success {
-    width: 640px;
-    min-height: 347px;
-    margin: 0 auto;
+    &--success {
+      width: 640px;
+      min-height: 347px;
+    }
   }
 }
 
@@ -76,36 +74,14 @@
   .popup__wrapper {
     &--error {
       padding: 64px 62px 60px 61px;
-      text-align: center;
     }
 
     &--success {
       padding: 64px 114px 44px 112px;
-      text-align: center;
     }
   }
 
   .popup__title {
-    font-size: 30px;
     line-height: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .popup__text {
-    font-size: 14px;
-    line-height: 24px;
-  }
-
-  .popup--error {
-    width: 400px;
-    min-height: 347px;
-    margin: 0 auto;
-  }
-
-  .popup--success {
-    width: 640px;
-    min-height: 347px;
-    margin: 0 auto;
   }
 }

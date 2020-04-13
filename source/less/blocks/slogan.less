@@ -1,5 +1,5 @@
 .slogan {
-  width: 320px;
+  width: @mobile-width;
   min-height: 225px;
   margin: 0 auto;
   font-size: 14px;
@@ -23,7 +23,7 @@
 
 @media (min-width: @tablet-width) {
   .slogan {
-    width: 768px;
+    width: @tablet-width;
     min-height: 208px;
 
     .slogan__title {
@@ -38,12 +38,7 @@
 
 @media (min-width: @desktop-width) {
   .slogan {
-    width: 1200px;
-    min-height: 208px;
-
-    .slogan__title {
-      .font-title-tablet-desktop();
-    }
+    width: @desktop-width;
   }
 
   .slogan__wrapper {

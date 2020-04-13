@@ -1,5 +1,5 @@
 .links {
-  width: 320px;
+  width: @mobile-width;
   margin: 0 auto;
 }
 
@@ -20,7 +20,7 @@
 
 @media (min-width: @tablet-width) {
   .links {
-    width: 768px;
+    width: @tablet-width;
   }
 
   .links__wrapper {
@@ -40,20 +40,6 @@
 
 @media (min-width: @desktop-width) {
   .links {
-    width: 1200px;
-  }
-
-  .links__wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
-  .links__contacts {
-    margin: 0;
-  }
-
-  .links__social {
-    margin: 0;
+    width: @desktop-width;
   }
 }

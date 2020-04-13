@@ -1,5 +1,5 @@
 .decoration {
-  width: 320px;
+  width: @mobile-width;
   min-height: 158px;
   margin: 0 auto;
   background-image: url("../img/text-sedona.svg");
@@ -11,7 +11,7 @@
 .decoration__wrapper {
   position: relative;
   z-index: -2;
-  width: 320px;
+  width: @mobile-width;
   height: 158px;
   background-color: @color_blue;
 
@@ -42,11 +42,8 @@
 
 @media (min-width: @tablet-width) {
   .decoration {
-    width: 768px;
+    width: @tablet-width;
     min-height: 290px;
-    margin: 0 auto;
-    background-image: url("../img/text-sedona.svg");
-    background-position: top 43% center;
     background-size: 460px 80px;
   }
 
@@ -69,11 +66,8 @@
 
 @media (min-width: @desktop-width) {
   .decoration {
-    width: 1200px;
+    width: @desktop-width;
     min-height: 301px;
-    margin: 0 auto;
-    background-image: url("../img/text-sedona.svg");
-    background-position: top 43% center;
     background-size: 460px 79px;
   }
 

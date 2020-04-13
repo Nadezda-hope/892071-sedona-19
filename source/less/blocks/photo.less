@@ -1,5 +1,5 @@
 .photo {
-  width: 320px;
+  width: @mobile-width;
   min-height: 415px;
   box-sizing: border-box;
   padding: 20px;
@@ -8,35 +8,6 @@
   text-transform: none;
 }
 
-.photo__pic {
-  &--space {
-    width: 280px;
-    height: 280px;
-    background: url("../img/photo-sunset-mobile@1x.jpg") no-repeat;
-    background-size: 280px 280px;
-  }
-
-  &--plants {
-    width: 280px;
-    height: 280px;
-    background: url("../img/photo-cactus-mobile@1x.jpg") no-repeat;
-    background-size: 280px 280px;
-  }
-
-  &--north {
-    width: 280px;
-    height: 280px;
-    background: url("../img/photo-roads-mobile@1x.jpg") no-repeat;
-    background-size: 280px 280px;
-  }
-
-  &--bridge {
-    width: 280px;
-    height: 280px;
-    background: url("../img/photo-bridge-mobile@1x.jpg") no-repeat;
-    background-size: 280px 280px;
-  }
-}
 
 .photo__title {
   margin: 0;
@@ -60,36 +31,6 @@
       min-height: 482px;
     }
   }
-
-  .photo__pic {
-    width: 100%;
-    height: auto;
-
-    &--space {
-      width: 648px;
-      height: 400px;
-      background: url("../img/photo-sunset-tablet@1x.jpg") no-repeat;
-    }
-
-    &--plants {
-      width: 324px;
-      height: 267px;
-      background: url("../img/photo-cactus-tablet@1x.jpg") no-repeat;
-      background-size: 324px 268px;
-    }
-
-    &--north {
-      width: 324px;
-      height: 267px;
-      background: url("../img/photo-roads-tablet@1x.jpg") no-repeat;
-    }
-
-    &--bridge {
-      width: 324px;
-      height: 267px;
-      background: url("../img/photo-bridge-tablet@1x.jpg") no-repeat;
-    }
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -102,37 +43,8 @@
     color: @white;
 
     &:first-child {
-      width: 1200px;
+      width: @desktop-width;
       min-height: 400px;
-    }
-  }
-
-  .photo__pic {
-    width: 100%;
-    height: auto;
-
-    &--space {
-      width: 1200px;
-      height: 400px;
-      background: url("../img/photo-sunset-desktop@1x.jpg") no-repeat;
-    }
-
-    &--plants {
-      width: 400px;
-      height: 267px;
-      background: url("../img/photo-cactus-desktop@1x.jpg") no-repeat;
-    }
-
-    &--north {
-      width: 400px;
-      height: 267px;
-      background: url("../img/photo-roads-desktop@1x.jpg") no-repeat;
-    }
-
-    &--bridge {
-      width: 400px;
-      height: 267px;
-      background: url("../img/photo-bridge-desktop@1x.jpg") no-repeat;
     }
   }
 

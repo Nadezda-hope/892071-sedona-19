@@ -1,7 +1,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  width: 320px;
+  width: @mobile-width;
   margin: 0 auto;
   font-size: 14px;
   line-height: 26px;
@@ -12,7 +12,7 @@
 }
 
 .form__fieldset {
-  width: 320px;
+  width: @mobile-width;
   margin: 0;
   padding: 0;
   border: none;
@@ -29,7 +29,7 @@
 
 @media (min-width: @tablet-width) {
   .form {
-    width: 768px;
+    width: @tablet-width;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -67,7 +67,7 @@
 
 @media (min-width: @desktop-width) {
   .form {
-    width: 1200px;
+    width: @desktop-width;
     flex-direction: row;
     flex-wrap: wrap;
   }
