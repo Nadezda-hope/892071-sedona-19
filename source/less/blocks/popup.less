@@ -1,16 +1,15 @@
 .popup {
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+    margin: 0 auto;
 
   &--error {
     width: @mobile-width;
     min-height: 280px;
-    margin: 0 auto;
   }
 
   &--success {
     width: @mobile-width;
     min-height: 323px;
-    margin: 0 auto;
   }
 }
 
@@ -71,16 +70,6 @@
 }
 
 @media (min-width: @desktop-width) {
-  .popup__wrapper {
-    &--error {
-      padding: 64px 62px 60px 61px;
-    }
-
-    &--success {
-      padding: 64px 114px 44px 112px;
-    }
-  }
-
   .popup__title {
     line-height: 40px;
   }
