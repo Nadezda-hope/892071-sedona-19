@@ -34,7 +34,7 @@
     background-position-x: center;
     width: 100%;
     height: 26px;
-    bottom: 0;
+    bottom: -1px;
   }
 }
 
@@ -49,12 +49,13 @@
     height: 518px;
 
     &::before {
+      background: url("../img/bg-back-tablet@1x.jpg") no-repeat;
       height: 518px;
     }
 
     &::after {
+      background: url("../img/bg-intro-triangle-tablet.svg") no-repeat;
       height: 57px;
-      bottom: -1px;
     }
   }
 }
@@ -62,5 +63,15 @@
 @media (min-width: @desktop-width) {
   .welcome {
     width: @desktop-width;
+  }
+
+  .welcome__wrapper {
+    &::before {
+      background: url("../img/bg-back-desktop@1x.jpg") no-repeat;
+    }
+
+    &::after {
+      background: url("../img/bg-intro-triangle-desktop.svg") no-repeat;
+    }
   }
 }
