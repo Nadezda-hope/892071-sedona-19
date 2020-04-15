@@ -1,5 +1,8 @@
 .form {
-  width: 320px;
+  display: flex;
+  flex-direction: column;
+  width: @mobile-width;
+  margin: 0 auto;
   font-size: 14px;
   line-height: 26px;
 }
@@ -9,7 +12,7 @@
 }
 
 .form__fieldset {
-  width: 320px;
+  width: @mobile-width;
   margin: 0;
   padding: 0;
   border: none;
@@ -22,4 +25,23 @@
 
 .form__label {
   .font-title();
+}
+
+@media (min-width: @tablet-width) {
+  .form {
+    width: @tablet-width;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .form__button {
+    order: 6;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form {
+    width: @desktop-width;
+  }
 }

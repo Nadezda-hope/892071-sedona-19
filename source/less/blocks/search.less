@@ -1,4 +1,8 @@
 .search {
+  box-sizing: border-box;
+  width: @mobile-width;
+  min-height: 287px;
+  margin: 0 auto;
   padding: 28px 25px 40px 25px;
   font-size: 14px;
   font-weight: normal;
@@ -22,5 +26,37 @@
     margin: 40px 20px 40px 19px;
     text-align: center;
     text-decoration: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .search {
+    width: @tablet-width;
+    min-height: 318px;
+    padding: 56px 155px 55px 155px;
+  }
+
+  .search__button {
+    width: 458px;
+    height: 58px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .search {
+    width: @desktop-width;
+    min-height: 331px;
+    padding: 53px 371px 62px 371px;
+
+    .search__wrapper {
+      width: 100%;
+    }
+  }
+
+  .search__button {
+    width: 458px;
+    height: 58px;
+    margin: 0;
   }
 }
