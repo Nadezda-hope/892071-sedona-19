@@ -1,19 +1,29 @@
 .feature {
   .font-text();
-  width: @mobile-width;
-  margin: 0 auto;
+  width: auto;
+}
+
+.feature__list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .feature__item {
   position: relative;
   box-sizing: border-box;
   width: 100%;
+  max-width: 400px;
   min-height: 130px;
+  margin: 0 auto;
   text-align: left;
 
   &--housing {
-    padding: 29px 41px 28px 69px;
-    order: 1;
+    padding: 35px 41px 28px 69px;
+    order: 0;
 
     &::before {
       content: "";
@@ -28,8 +38,9 @@
   }
 
   &--souvenir {
-    padding: 0 51px 28px 70px;
-    order: 2;
+    min-height: 110px;
+    padding: 0 51px 0 70px;
+    order: 1;
 
     &::before {
       content: "";
@@ -38,26 +49,24 @@
       background-size: 32px 38px;
       width: 32px;
       height: 38px;
-      top: 0;
+      top: -11px;
       left: 25px;
     }
   }
 
   &--food {
     padding: 0 70px 36px 70px;
-    order: 3;
+    order: 2;
 
     &::before {
       content: "";
       position: absolute;
       background: url("../img/icon-burger.svg") no-repeat;
-      background-size: 32px 38px;
-      width: 32px;
-      height: 38px;
-      top: 0;
-      left: 25px;
-      stroke: @color_blue;
-      fill: @color_blue;
+      background-size: 40px 35px;
+      width: 40px;
+      height: 35px;
+      top: -5px;
+      left: 19px;
     }
   }
 }
@@ -68,28 +77,19 @@
   margin-bottom: 14px;
 }
 
-.feature__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
 .feature__details {
   margin: 0;
 }
 
 @media (min-width: @tablet-width) {
-  .feature {
-    width: @tablet-width;
-  }
-
   .feature__list {
-    display: flex;
+    width: 100%;
+    flex-direction: row;
   }
 
   .feature__item {
-    width: 256px;
-    min-height: 331px;
+    width: 33%;
+    min-height: 330px;
     text-align: center;
 
     &--housing {
@@ -106,6 +106,7 @@
 
     &--souvenir {
       padding: 160px 46px 63px 46px;
+      order: 2;
 
       &::before {
         background-size: 64px 75px;
@@ -118,6 +119,7 @@
 
     &--food {
       padding: 160px 44px 63px 44px;
+      order: 1;
 
       &::before {
         background-size: 77px 68px;
@@ -135,16 +137,11 @@
 }
 
 @media (min-width: @desktop-width) {
-  .feature {
-    width: @desktop-width;
-  }
-
   .feature__item {
     width: 400px;
-    min-height: 331px;
 
     &--housing {
-      padding: 160px 83px 75px 71px;
+      padding: 160px 60px 75px 60px;
 
       &::before {
         left: 161px;
@@ -152,15 +149,15 @@
     }
 
     &--souvenir {
-      padding: 160px 83px 53px 56px;
+      padding: 160px 83px 51px 56px;
 
       &::before {
-        left: 150px;
+        left: 165px;
       }
     }
 
     &--food {
-      padding: 160px 83px 93px 92px;
+      padding: 160px 60px 87px 60px;
 
       &::before {
         left: 161px;

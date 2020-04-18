@@ -8,8 +8,8 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-menu">
-        <button class="main-menu__toggle" type="button">Открыть меню</button>
+      <nav class="main-menu main-menu--closed main-menu--nojs">
+        <button class="main-menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-menu__wrapper">
           <ul class="main-menu__list site-list">
             <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
@@ -41,7 +41,7 @@
 
       <div class="gallery">
         <section class="photo">
-          <div class="photo__item photo__item--first">
+          <div class="photo__item">
             <img class="photo__pic photo__pic--space" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Неродные просторы">
             <div class="photo__description">
               <h3 class="photo__title">Неродные просторы</h3>
@@ -146,5 +146,21 @@
         </div>
       </section>
     </footer>
+    <script>
+      var menuMain = document.querySelector('.main-menu');
+      var menuToggle = document.querySelector('.main-menu__toggle');
+
+      menuMain.classList.remove('main-menu--nojs');
+
+      menuToggle.addEventListener('click', function() {
+        if (menuMain.classList.contains('main-menu--closed')) {
+          menuMain.classList.remove('main-menu--closed');
+          menuMain.classList.add('main-menu--opened');
+        } else {
+          menuMain.classList.add('main-menu--closed');
+          menuMain.classList.remove('main-menu--opened');
+        }
+      });
+    </script>
   </body>
 </html>

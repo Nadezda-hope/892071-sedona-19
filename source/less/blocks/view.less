@@ -1,11 +1,10 @@
 .view {
-  width: @mobile-width;
-  background-color: @color_grey;
-  margin: 0 auto;
+  width: auto;
+  background-color: @color_gray;
 }
 
 .view__list {
-  width: @mobile-width;
+  width: 100%;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -20,7 +19,7 @@
 
 .view__item {
   box-sizing: border-box;
-  width: @mobile-width;
+  width: 100%;
   min-height: 167px;
   .font-text();
 
@@ -33,15 +32,12 @@
   }
 
   &--tourists {
-    padding: 0 37px 32px 37px;
+    min-height: 141px;
+    padding: 0 37px 0 37px;
   }
 }
 
 @media (min-width: @tablet-width) {
-  .view {
-    width: @tablet-width;
-  }
-
   .view__list {
     display: flex;
     flex-direction: row;
@@ -49,7 +45,7 @@
   }
 
   .view__item {
-    width: 256px;
+    width: 33%;
     min-height: 256px;
 
     &--square {
@@ -67,28 +63,25 @@
 
   .view__title {
     .font-title-tablet-desktop();
+    padding: 0 40px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .view {
-    width: @desktop-width;
-  }
-
   .view__item {
     .font-text();
     width: 400px;
 
     &--square {
-      padding: 50px 58px 70px 57px;
+      padding: 45px 58px 58px 57px;
     }
 
     &--road {
-      padding: 50px 69px 70px 69px;
+      padding: 45px 69px 58px 69px;
     }
 
     &--tourists {
-      padding: 50px 70px 70px 70px;
+      padding: 45px 70px 58px 70px;
     }
   }
 }
