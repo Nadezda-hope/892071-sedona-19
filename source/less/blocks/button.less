@@ -3,4 +3,30 @@
   color: @white;
   outline: none;
   border: none;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: @bg-color_hover;
+  }
+
+  &:active {
+    color: @color-active;
+    background-color: @bg-color_active;
+  }
+}
+
+.button__wrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .button__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 146px;
+    background-color: @color_gray;
+  }
 }

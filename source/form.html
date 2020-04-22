@@ -201,7 +201,7 @@
 
     <section class="popup popup--error">
       <div class="popup__wrapper popup__wrapper--error">
-        <h3 class="popup__title">Что-то пошло не так</h3>
+        <h3 class="popup__title">Что-то пошло не так!</h3>
         <p class="popup__text">
           Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить
         </p>
@@ -216,25 +216,12 @@
           Спасибо за ваше участие, ваш отзыв уже поступил к нам.
           В ближайшее время мы опубликуем его на сайте.
         </p>
+      </div>
+      <div class="button__wrapper">
         <button class="button popup__button popup__button--success" type="button">Закрыть окно</button>
       </div>
     </section>
 
-    <script>
-      var menuMain = document.querySelector('.main-menu');
-      var menuToggle = document.querySelector('.main-menu__toggle');
-
-      menuMain.classList.remove('main-menu--nojs');
-
-      menuToggle.addEventListener('click', function() {
-        if (menuMain.classList.contains('main-menu--closed')) {
-          menuMain.classList.remove('main-menu--closed');
-          menuMain.classList.add('main-menu--opened');
-        } else {
-          menuMain.classList.add('main-menu--closed');
-          menuMain.classList.remove('main-menu--opened');
-        }
-      });
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>

@@ -27,6 +27,16 @@
   .font-title();
 }
 
+.form__button {
+  width: 87.5%;
+  height: 58px;
+  margin: 0 auto;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
 @media (min-width: @tablet-width) {
   .form {
     width: @tablet-width;
@@ -36,6 +46,7 @@
   }
 
   .form__button {
+    width: 324px;
     order: 6;
   }
 }
@@ -43,5 +54,9 @@
 @media (min-width: @desktop-width) {
   .form {
     width: @desktop-width;
+  }
+
+  .form__button {
+    width: 480px;
   }
 }

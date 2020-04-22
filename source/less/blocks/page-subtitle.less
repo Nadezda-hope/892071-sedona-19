@@ -1,6 +1,35 @@
 .page-subtitle {
+  position: relative;
+  min-height: 191px;
   font-size: 14px;
   line-height: 24px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.page-subtitle__wrapper {
+  width: 85%;
+  margin: 0 auto;
+  padding: 0;
+  padding-top: 39px;
+  text-align: center;
+
+  &--form {
+    width: 86.2%;
+    padding-bottom: 17px;
+  }
+
+  &--photo {
+    padding-bottom: 27px;
+  }
 }
 
 .page-subtitle__title {
@@ -13,55 +42,55 @@
   margin: 0;
 }
 
-.page-subtitle__wrapper {
-  width: 83%;
-  margin: 0 auto;
-
-  &--form {
-    padding: 38px 0 17px 0;
-    text-align: center;
-  }
-
-  &--photo {
-    padding: 38px 0 27px 0;
-    text-align: center;
-  }
-}
-
 @media (min-width: @tablet-width) {
+  .page-subtitle {
+    &::after {
+      display: none;
+    }
+  }
+
   .page-subtitle__title {
+    margin-bottom: 32px;
     font-size: 30px;
     line-height: 26px;
+    font-weight: bold;
   }
 
   .page-subtitle__wrapper {
+    padding: 0;
+
     &--form {
       width: 57%;
-      padding: 69px 0 66px 0;
+      padding-top: 69px;
+      padding-bottom: 66px;
     }
 
     &--photo {
       width: 56%;
-      padding: 64px 0 56px 0;
+      padding-top: 72px;
+      padding-bottom: 56px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-subtitle__title {
+    margin-bottom: 32px;
     font-size: 30px;
     line-height: 26px;
   }
 
   .page-subtitle__wrapper {
+    padding-top: 110px;
+
     &--form {
       width: 36.5%;
-      padding: 108px 0 66px 0;
+      padding-bottom: 66px;
     }
 
     &--photo {
       width: 35.6%;
-      padding: 107px 0 51px 0;
+      padding-bottom: 51px;
     }
   }
 }

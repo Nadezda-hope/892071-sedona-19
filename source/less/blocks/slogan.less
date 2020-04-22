@@ -1,6 +1,6 @@
 .slogan {
   width: auto;
-  min-height: 225px;
+  min-height: 202px;
   font-size: 14px;
   line-height: 26px;
   text-align: center;
@@ -17,10 +17,14 @@
 }
 
 .slogan__wrapper {
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  min-height: 202px;
   margin: 0 auto;
-  padding: 40px 10% 35px 10%;
+  padding: 34px 10% 0;
 }
 
 @media (min-width: @tablet-width) {
@@ -33,12 +37,12 @@
   }
 
   .slogan__wrapper {
-    padding: 49px 18% 48px 18%;
+    padding: 51px 18% 48px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .slogan__wrapper {
-    padding: 49px 29% 52px 29%;
+    padding: 49px 29% 52px;
   }
 }
