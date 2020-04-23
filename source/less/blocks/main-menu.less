@@ -4,9 +4,13 @@
   min-height: 223px;
 }
 
+.main-menu--closed .main-menu__wrapper {
+  display: none;
+}
+
 .main-menu__toggle {
   position: absolute;
-  bottom: -40px;
+  bottom: 16px;
   right: 20px;
   z-index: 2;
   display: block;
@@ -23,7 +27,7 @@
   top: 0;
   right: 0;
   width: 23px;
-  height: 3px;
+  height: 4px;
   background-color: @color_blue;
   box-shadow: 0 8px 0 0 @color_blue, 0 16px 0 0 @color_blue;
 }
@@ -75,6 +79,10 @@
 @media (min-width: @tablet-width) {
   .main-menu {
     min-height: 56px;
+  }
+
+  .main-menu--closed .main-menu__wrapper {
+    display: block;
   }
 
   .main-menu__toggle {

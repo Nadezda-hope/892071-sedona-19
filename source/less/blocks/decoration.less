@@ -10,7 +10,7 @@
 .decoration__wrapper {
   position: relative;
   z-index: -2;
-  width: 100%;
+  width: @mobile-width;
   min-height: 158px;
   background-color: @color_blue;
 
@@ -43,9 +43,11 @@
   .decoration {
     min-height: 290px;
     background-size: 460px 80px;
+    background-position: top 45% left 50%;
   }
 
   .decoration__wrapper {
+    width: @tablet-width;
     min-height: 290px;
 
     &::before {
@@ -71,6 +73,7 @@
   }
 
   .decoration__wrapper {
+    width: @desktop-width;
     min-height: 301px;
 
     &::before {
