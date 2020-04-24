@@ -3,10 +3,20 @@
 
   &--error {
     min-height: 280px;
+
+    .popup__text {
+      width: 207px;
+      margin-top: 30px;
+    }
   }
 
   &--success {
     min-height: 323px;
+
+    .popup__text {
+      width: 224px;
+      margin-top: 30px;
+    }
   }
 }
 
@@ -20,16 +30,18 @@
   }
 
   &--success {
-    padding: 34px 0 35px;
+    padding-top: 34px;
   }
 }
 
 .popup__title {
   .font-title();
+  margin: 0 auto;
 }
 
 .popup__text {
   .font-text();
+  margin: 0 auto;
 }
 
 .popup__button {
@@ -39,10 +51,12 @@
 
   &--close {
     width: 180px;
+    margin-top: 29px;
   }
 
   &--success {
     width: 280px;
+    margin-top: 29px;
   }
 }
 
@@ -59,10 +73,20 @@
 
     &--error {
       width: 400px;
+
+      .popup__text {
+        width: 277px;
+        margin-top: 40px;
+      }
     }
 
     &--success {
       width: 640px;
+
+      .popup__text {
+        width: 414px;
+        margin-top: 50px;
+      }
     }
   }
 
@@ -74,7 +98,7 @@
 
     &--success {
       width: 414px;
-      padding: 43px 0 0;
+      padding: 43px 0 35px;
     }
 
     &--button {
@@ -105,6 +129,7 @@
 
     &--success {
       width: 458px;
+      margin-top: 0;
     }
   }
 }
