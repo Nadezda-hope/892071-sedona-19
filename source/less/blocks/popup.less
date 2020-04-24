@@ -46,6 +46,12 @@
   }
 }
 
+.popup__wrapper--button {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
 @media (min-width: @tablet-width) {
   .popup {
     min-height: 347px;
@@ -69,6 +75,14 @@
     &--success {
       width: 414px;
       padding: 43px 0 0;
+    }
+
+    &--button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 146px;
+      background-color: @color_gray;
     }
   }
 

@@ -62,14 +62,17 @@
 
   .reasons__title {
     .font-title-tablet-desktop();
-    white-space: pre-line;
+    width: 151px;
+    margin: 0 auto;
+    margin-bottom: 10px;
   }
 
   .reasons__item {
     display: block;
     width: 256px;
     height: 256px;
-    padding-top: 19px;
+    padding: 0;
+    padding-top: 45px;
 
     &--city::before {
       display: none;
@@ -81,8 +84,9 @@
   }
 
   .reasons__description {
-    margin-top: 0;
-    white-space: pre-line;
+    width: 165px;
+    margin: 0 auto;
+    margin-top: 21px;
   }
 
   .reasons__photo {
@@ -104,11 +108,7 @@
 
   .reasons__item {
     width: 400px;
-    padding: 26px 65px 0;
-
-    &--bridge {
-      padding: 27px 90px 0;
-    }
+    padding-top: 53px;
   }
 
   .reasons__photo {
@@ -120,7 +120,12 @@
   }
 
   .reasons__description {
+    width: 226px;
+    margin: 0 auto;
     margin-top: 20px;
-    white-space: normal;
+
+    &--city {
+      width: 270px;
+    }
   }
 }

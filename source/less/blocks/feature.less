@@ -22,10 +22,10 @@
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
+  padding-left: 69px;
   text-align: left;
 
   &--housing {
-    padding-left: 69px;
     order: 0;
 
     &::before {
@@ -41,7 +41,7 @@
   }
 
   &--souvenir {
-    padding-left: 70px;
+    padding-top: 2px;
     order: 1;
 
     &::before {
@@ -51,12 +51,13 @@
       background-size: 32px 38px;
       width: 32px;
       height: 38px;
-      top: -11px;
-      left: 25px;
+      top: -9px;
+      left: 23px;
     }
   }
 
   &--food {
+    padding-top: 2px;
     padding-left: 70px;
     order: 2;
 
@@ -67,8 +68,8 @@
       background-size: 40px 35px;
       width: 40px;
       height: 35px;
-      top: -4px;
-      left: 18px;
+      top: 0;
+      left: 17px;
     }
   }
 }
@@ -95,7 +96,8 @@
     display: block;
     width: 256px;
     min-height: 330px;
-    padding: 159px 45px 30px;
+    padding: 0;
+    padding-top: 159px;
     text-align: center;
 
     &--housing {
@@ -135,11 +137,24 @@
 
   .feature__title {
     .font-title-tablet-desktop();
-    margin-bottom: 0;
+    margin-bottom: 21px;
   }
 
+
   .feature__details {
-    white-space: pre-line;
+    margin: 0 auto;
+
+    &--housing {
+      width: 160px;
+    }
+
+    &--souvenir {
+      width: 169px;
+    }
+
+    &--food {
+      width: 155px;
+    }
   }
 }
 
@@ -171,6 +186,18 @@
   }
 
   .feature__details {
-    white-space: pre-line;
+    margin: 0 auto;
+
+    &--housing {
+      width: 310px;
+    }
+
+    &--souvenir {
+      width: 215px;
+    }
+
+    &--food {
+      width: 300px;
+    }
   }
 }
