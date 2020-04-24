@@ -40,8 +40,15 @@
   }
 }
 
+br {
+  display: none;
+}
 
 @media (min-width: @tablet-width) {
+  br {
+    display: block;
+  }
+
   .search {
     min-height: 318px;
     padding-top: 56px;
@@ -59,6 +66,9 @@
     }
 
     .search__description {
+      width: 440px;
+      margin: 0 auto;
+      margin-top: 32px;
       padding: 0;
     }
 

@@ -84,7 +84,15 @@
   margin: 0;
 }
 
+br {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
+  br {
+    display: block;
+  }
+
   .feature__list {
     width: @tablet-width;
     min-height: 330px;
