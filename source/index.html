@@ -8,8 +8,8 @@
   </head>
   <body>
     <header class="page-header">
-      <nav class="main-menu">
-        <button class="main-menu__toggle" type="button">Открыть меню</button>
+      <nav class="main-menu main-menu--closed main-menu--nojs">
+        <button class="main-menu__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-menu__wrapper">
           <ul class="main-menu__list site-list">
             <li class="site-list__item site-list__item--active"><a class="site-list__link">Главная</a></li>
@@ -51,7 +51,7 @@
             <span class="reasons__number">
               — №1 —
             </span>
-            <p class="reasons__description">
+            <p class="reasons__description reasons__description--city">
               Седона не аттракцион для туристов, там течет своя жизнь
             </p>
           </div>
@@ -75,7 +75,7 @@
                 Еда
               </h3>
               <p class="feature__details">
-                Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                Всегда заказывайте фирменный бургер, вы&nbsp;не разочаруетесь!
               </p>
             </li>
             <li class="feature__item feature__item--souvenir">
@@ -83,7 +83,7 @@
                 Сувениры
               </h3>
               <p class="feature__details">
-                Не только китайского, но и местного производства!
+                Не только китайского,<br> но и местного производства!
               </p>
             </li>
           </ul>
@@ -92,12 +92,12 @@
         <div class="reasons">
           <div class="reasons__item reasons__item--bridge">
             <h3 class="reasons__title">
-              Там есть мост дьявола
+              Там есть мост&nbsp;дьявола
             </h3>
             <span class="reasons__number">
               — №2 —
             </span>
-            <p class="reason__description">
+            <p class="reasons__description reasons__description--bridge">
               Да, по нему можно пройти! Если вы осмелитесь, конечно
             </p>
           </div>
@@ -115,7 +115,7 @@
               <span class="view__number">
                 — №3 —
               </span>
-              <p class="view__description">
+              <p class="view__description view__description--square">
                 Все интересные места находятся очень близко
               </p>
             </li>
@@ -126,9 +126,8 @@
               <span class="view__number">
                 — №4 —
               </span>
-              <p class="view__description">
-                Ехать в Седону из Лас-Вегаса
-                совсем не скучно!
+              <p class="view__description view__description--road">
+                Ехать в Седону из Лас-Вегаса совсем не скучно!
               </p>
             </li>
             <li class="view__item view__item--tourists">
@@ -138,9 +137,8 @@
               <span class="view__number">
                 — №5 —
               </span>
-              <p class="view__description">
-                Большинство едет в гранд каньон
-                и толпится там
+              <p class="view__description view__description--tourists">
+                Большинство едет в гранд каньон и толпится там
               </p>
             </li>
           </ul>
@@ -153,7 +151,7 @@
             Заинтересовались?
           </h3>
           <p class="search__description">
-            Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне
+            Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне
           </p>
           <a class="button search__button" href="#">
             Найти гостиницу
@@ -213,5 +211,8 @@
         </div>
       </section>
     </footer>
+
+    <script src="js/script.js"></script>
+
   </body>
 </html>

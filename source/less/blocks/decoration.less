@@ -1,7 +1,6 @@
 .decoration {
-  width: @mobile-width;
+  width: auto;
   min-height: 158px;
-  margin: 0 auto;
   background-image: url("../img/text-sedona.svg");
   background-position: top 43% center;
   background-size: 230px 40px;
@@ -11,18 +10,18 @@
 .decoration__wrapper {
   position: relative;
   z-index: -2;
-  width: @mobile-width;
-  height: 158px;
+  width: 100%;
+  min-height: 158px;
   background-color: @color_blue;
 
   &::before {
     content: "";
     background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
-    background-size: 320px 158px;
+    background-position: center -200px;
     z-index: -1;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 158px;
     top: 0;
     left: 0;
   }
@@ -30,21 +29,21 @@
   &::after {
     content: "";
     background: url("../img/bg-intro-triangle-mobile.svg") no-repeat;
-    background-size: 320px 37px;
+    background-size: 100% 26px;
     z-index: 0;
     position: absolute;
     width: 100%;
     height: 37px;
-    bottom: -6px;
+    bottom: -12px;
     left: 0;
   }
 }
 
 @media (min-width: @tablet-width) {
   .decoration {
-    width: @tablet-width;
     min-height: 290px;
     background-size: 460px 80px;
+    background-position: top 45% left 50%;
   }
 
   .decoration__wrapper {
@@ -53,37 +52,37 @@
 
     &::before {
       background: url("../img/bg-back-tablet@1x.jpg") no-repeat;
-      background-size: 768px 290px;
+      background-size: cover;
+      background-position-y: -180px;
+      height: 290px;
     }
 
     &::after {
       background: url("../img/bg-intro-triangle-tablet.svg") no-repeat;
-      background-size: 768px 57px;
-      bottom: 0;
+      background-size: 100% 57px;
+      height: 57px;
+      bottom: -1px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
   .decoration {
-    width: @desktop-width;
     min-height: 301px;
     background-size: 460px 79px;
   }
 
   .decoration__wrapper {
-    width: 100%;
+    width: @desktop-width;
     min-height: 301px;
 
     &::before {
       background: url("../img/bg-back-desktop@1x.jpg") no-repeat;
-      background-size: 1200px 301px;
+      height: 301px;
     }
 
     &::after {
       background: url("../img/bg-intro-triangle-desktop.svg") no-repeat;
-      background-size: 1200px 57px;
-      bottom: 0;
     }
   }
 }

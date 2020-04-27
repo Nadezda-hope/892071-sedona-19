@@ -1,7 +1,18 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   .font-text();
-  min-width: 320px;
-  max-width: 1200px;
+  box-sizing: border-box;
+  min-width: @mobile-width;
+  max-width: @desktop-width;
   margin: auto;
   padding: 0;
   font-family: @font-base;
@@ -16,7 +27,7 @@ img {
   height: auto;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active) {
   position: absolute;
   width: 1px;
   height: 1px;

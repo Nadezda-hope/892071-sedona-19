@@ -8,6 +8,7 @@
 }
 
 .form__list {
+  padding: 0;
   list-style: none;
 }
 
@@ -21,10 +22,22 @@
 .form__legend {
   .font-title();
   text-align: center;
+  margin: 0 auto;
 }
 
 .form__label {
   .font-title();
+}
+
+.form__button {
+  width: 280px;
+  height: 58px;
+  margin: 0 auto;
+  margin-bottom: 37px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
@@ -36,6 +49,7 @@
   }
 
   .form__button {
+    width: 324px;
     order: 6;
   }
 }
@@ -43,5 +57,9 @@
 @media (min-width: @desktop-width) {
   .form {
     width: @desktop-width;
+  }
+
+  .form__button {
+    width: 480px;
   }
 }

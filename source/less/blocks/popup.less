@@ -1,58 +1,121 @@
 .popup {
-  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+  width: @mobile-width;
   margin: 0 auto;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 
   &--error {
-    width: @mobile-width;
     min-height: 280px;
+
+    .popup__text {
+      width: 207px;
+      margin-top: 25px;
+    }
   }
 
   &--success {
-    width: @mobile-width;
     min-height: 323px;
+
+    .popup__text {
+      width: 224px;
+      margin-top: 26px;
+    }
   }
 }
 
 .popup__wrapper {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
   &--error {
-    padding: 47px 56px 20px 52px;
-    text-align: center;
+    padding-top: 42px;
   }
 
   &--success {
-    padding: 49px 52px 20px 52px;
-    text-align: center;
+    padding-top: 43px;
+  }
+
+  &--button {
+    width: 100%;
+    min-height: 98px;
+    margin: 33px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: @color_gray;
   }
 }
 
 .popup__title {
-  .font-title();
+  font-size: 18px;
+  line-height: 26px;
+
+  margin: 0 auto;
 }
 
 .popup__text {
-  .font-text();
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0 auto;
+}
+
+.popup__button {
+  .font-title();
+  min-height: 58px;
+  margin: 0 auto;
+
+  &--close {
+    width: 180px;
+    margin-top: 23px;
+  }
+
+  &--success {
+    width: 280px;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .popup {
+    min-height: 347px;
+    margin: 0 auto;
+
     &--error {
       width: 400px;
-      min-height: 347px;
+
+      .popup__title {
+        font-size: 30px;
+        line-height: 40px;
+      }
+
+      .popup__text {
+        width: 277px;
+        margin-top: 24px;
+      }
     }
 
     &--success {
       width: 640px;
-      min-height: 347px;
+
+      .popup__text {
+        width: 414px;
+        margin-top: 31px;
+      }
     }
   }
 
   .popup__wrapper {
     &--error {
-      padding: 64px 62px 60px 61px;
+      width: 277px;
+      padding-top: 56px;
     }
 
     &--success {
-      padding: 64px 114px 44px 112px;
+      width: 414px;
+      padding-top: 61px;
+    }
+
+    &--button {
+      min-height: 146px;
     }
   }
 
@@ -67,10 +130,16 @@
     font-size: 14px;
     line-height: 24px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .popup__title {
-    line-height: 40px;
+  .popup__button {
+    &--close {
+      width: 272px;
+      margin-top: 33px;
+    }
+
+    &--success {
+      width: 458px;
+      margin-top: 0;
+    }
   }
 }

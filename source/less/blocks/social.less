@@ -4,15 +4,12 @@
   padding: 0;
 }
 
-.social__item {
-  display: block;
-}
-
 .social__link {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: @color_blue;
-  text-align: center;
-  vertical-align: middle;
 
   &--twitter {
     width: 46px;
@@ -29,6 +26,18 @@
   &--youtube {
     width: 46px;
     height: 48px;
+  }
+
+  &:hover {
+    background-color: @bg-color_hover;
+  }
+
+  &:active {
+    background-color: @bg-color_active;
+  }
+
+  &:active path {
+    fill: @color-active;
   }
 }
 

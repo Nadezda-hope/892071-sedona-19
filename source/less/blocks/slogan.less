@@ -1,7 +1,6 @@
 .slogan {
-  width: @mobile-width;
-  min-height: 225px;
-  margin: 0 auto;
+  width: auto;
+  min-height: 202px;
   font-size: 14px;
   line-height: 26px;
   text-align: center;
@@ -9,7 +8,7 @@
   .slogan__title {
     .font-title();
     margin: 0;
-    margin-bottom: 34px;
+    margin-bottom: 27px;
   }
 
   .slogan__text {
@@ -18,13 +17,19 @@
 }
 
 .slogan__wrapper {
-  padding: 29px 30px 35px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 202px;
+  margin: 0 auto;
+  padding: 34px 10% 0;
 }
 
 @media (min-width: @tablet-width) {
   .slogan {
-    width: @tablet-width;
-    min-height: 208px;
+    min-height: 206px;
 
     .slogan__title {
       .font-title-tablet-desktop();
@@ -32,16 +37,16 @@
   }
 
   .slogan__wrapper {
-    padding: 49px 139px 55px 139px;
+    padding: 51px 18% 48px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .slogan {
-    width: @desktop-width;
+  .slogan__wrapper {
+    padding: 50px 29% 50px;
   }
 
-  .slogan__wrapper {
-    padding: 49px 350px 55px 350px;
+  .slogan__title {
+    margin-bottom: 30px;
   }
 }
