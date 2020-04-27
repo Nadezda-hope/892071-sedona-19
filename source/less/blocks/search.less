@@ -38,17 +38,13 @@
     line-height: 26px;
     font-weight: bold;
   }
-}
 
-br {
-  display: none;
+  br {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
-  br {
-    display: block;
-  }
-
   .search {
     min-height: 318px;
     padding-top: 56px;
@@ -70,6 +66,10 @@ br {
       margin: 0 auto;
       margin-top: 32px;
       padding: 0;
+
+      br {
+        display: block;
+      }
     }
 
     .search__button {

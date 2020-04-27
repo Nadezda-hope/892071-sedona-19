@@ -1,5 +1,6 @@
 .view {
-  width: auto;
+  width: @mobile-width;
+  margin: 0 auto;
   background-color: @color_gray;
 }
 
@@ -30,7 +31,7 @@
     content: "";
     position: absolute;
     z-index: 1;
-    width: 280px;
+    width: 88%;
     height: 1px;
     background-color: #d6d6d6;
     bottom: 0;
@@ -43,6 +44,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .view {
+    width: @tablet-width;
+  }
+
   .view__list {
     flex-direction: row;
     min-height: 256px;
@@ -62,7 +67,7 @@
 
   .view__title {
     .font-title-tablet-desktop();
-    width: 159px;
+    width: 155px;
     margin: 0 auto 10px;
   }
 
@@ -77,6 +82,10 @@
 }
 
 @media (min-width: @desktop-width) {
+  .view {
+    width: @desktop-width;
+  }
+
   .view__item {
     .font-text();
     width: 400px;

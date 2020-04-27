@@ -1,6 +1,7 @@
 .feature {
   .font-text();
   width: auto;
+  margin: 0 auto;
 }
 
 .feature__list {
@@ -89,10 +90,6 @@ br {
 }
 
 @media (min-width: @tablet-width) {
-  br {
-    display: block;
-  }
-
   .feature__list {
     width: @tablet-width;
     min-height: 330px;
@@ -150,18 +147,11 @@ br {
 
 
   .feature__details {
+    width: 163px;
     margin: 0 auto;
 
-    &--housing {
-      width: 160px;
-    }
-
-    &--souvenir {
-      width: 169px;
-    }
-
-    &--food {
-      width: 155px;
+    br {
+      display: block;
     }
   }
 }
@@ -194,18 +184,7 @@ br {
   }
 
   .feature__details {
+    width: 300px;
     margin: 0 auto;
-
-    &--housing {
-      width: 310px;
-    }
-
-    &--souvenir {
-      width: 215px;
-    }
-
-    &--food {
-      width: 300px;
-    }
   }
 }

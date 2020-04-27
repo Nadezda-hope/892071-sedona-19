@@ -1,21 +1,31 @@
 .gallery {
+  width: 100%;
+}
+
+.gallery__wrapper {
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: @tablet-width) {
   .gallery {
+    padding-top: 14px;
+  }
+
+  .gallery__wrapper {
+    width: 648px;
+    margin: 0 auto;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 14px;
-    padding-left: 60px;
-    padding-right: 60px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .gallery {
-    padding: 0;
     padding-top: 20px;
+  }
+
+  .gallery__wrapper {
+    width: @desktop-width;
   }
 }
