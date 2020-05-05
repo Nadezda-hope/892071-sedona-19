@@ -45,11 +45,13 @@
 }
 
 .reasons__photo {
-  width: 100%;
+  width: @mobile-width;
   height: 260px;
+  background-color: #ceb5d4;
 }
 
 .reasons__pic {
+  display: block;
   height: 260px;
   margin: 0 auto;
 }
@@ -99,6 +101,7 @@
   .reasons__pic {
     width: 512px;
     height: 256px;
+    object-fit: cover;
   }
 }
 
@@ -114,10 +117,12 @@
 
   .reasons__photo {
     width: 800px;
+    height: 256px;
   }
 
   .reasons__pic {
     width: 800px;
+    height: 256px;
   }
 
   .reasons__description {

@@ -5,6 +5,13 @@
     <title>Форма отзыва</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
   </head>
   <body>
     <header class="page-header">
@@ -26,6 +33,7 @@
 
     <main class="inner-main">
       <section class="decoration">
+        <h2 class="visually-hidden">Фотография и логотип седоны</h2>
         <div class="decoration__wrapper">
         </div>
       </section>
@@ -42,21 +50,21 @@
       <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <fieldset class="form__fieldset form-name">
           <div class="form-name__wrapper">
-            <legend class="form__legend form-name__title">Представьтесь:</legend>
-            <ul class="form__list">
+            <legend class="form__legend form__legend--name">Представьтесь:</legend>
+            <ul class="form__list form__list--name">
               <li class="form-name__item">
                 <label class="form-name__label">Имя*:
-                  <input class="form-name__field" type="text" name="first-name" placeholder="Петр" required>
+                  <input class="form-name__field form-name__field--name" type="text" name="first-name" placeholder="Петр" required>
                 </label>
               </li>
               <li class="form-name__item">
                 <label class="form-name__label">Фамилия*:
-                  <input class="form-name__field" type="text" name="surname" placeholder="Иванов" required>
+                  <input class="form-name__field form-name__field--surename" type="text" name="surname" placeholder="Иванов" required>
                 </label>
               </li>
               <li class="form-name__item">
                 <label class="form-name__label">Отчество:
-                  <input class="form-name__field" type="text" name="patronymic" placeholder="Александрович">
+                  <input class="form-name__field form-name__field--patronymic" type="text" name="patronymic" placeholder="Александрович">
                 </label>
               </li>
             </ul>
@@ -65,16 +73,22 @@
 
         <fieldset class="form__fieldset form-contacts">
           <div class="form-contacts__wrapper">
-            <legend class="form__legend form-contacts__title">Контактная информация:</legend>
-            <ul class="form__list">
+            <legend class="form__legend form__legend--contacts">Контактная информация:</legend>
+            <ul class="form__list form__list--contacts">
               <li class="form-contacts__item">
-                <label class="form-contacts__label">Контактный телефон*:
+                <label class="form-contacts__label form-contacts__label--for-mobile">Контактный телефон*:
                   <input class="form-contacts__field" type="tel" name="phone" placeholder="Введите телефон">
+                  <span class="form-contacts__icon form-contacts__icon--tel"></span>
+                </label>
+                <label class="form-contacts__label form-contacts__label--for-desktop">Телефон*:
+                  <input class="form-contacts__field" type="tel" name="phone" placeholder="Введите телефон">
+                  <span class="form-contacts__icon form-contacts__icon--tel"></span>
                 </label>
               </li>
               <li class="form-contacts__item">
                 <label class="form-contacts__label">Электронная почта*:
                   <input class="form-contacts__field" type="email" name="email" placeholder="Введите e-mail">
+                  <span class="form-contacts__icon form-contacts__icon--email"></span>
                 </label>
               </li>
             </ul>
@@ -83,23 +97,26 @@
 
         <fieldset class="form__fieldset form-impression">
           <div class="form-impression__wrapper">
-            <legend class="form__legend form-impression__title">Ваше общее впечатление:</legend>
-            <ul class="form__list">
+            <legend class="form__legend form__legend--impression">Ваше общее впечатление:</legend>
+            <ul class="form__list form__list--impression">
               <li class="form-impression__item">
                 <label class="form__label form-impression__label">
-                  <input class="form-impression__radio" type="radio" name="impression" id="impression-1" value="positive" checked>
+                  <input class="form-impression__radio visually-hidden" type="radio" name="impression" id="impression-1" value="positive" checked>
+                  <span class="form-impression__indicator"></span>
                   Скорее положительное
                 </label>
               </li>
               <li class="form-impression__item">
                 <label class="form__label form-impression__label">
-                  <input class="form-impression__radio" type="radio" name="impression" id="impression-2" value="negative">
+                  <input class="form-impression__radio visually-hidden" type="radio" name="impression" id="impression-2" value="negative">
+                  <span class="form-impression__indicator"></span>
                   Скорее отрицательное
                 </label>
               </li>
               <li class="form-impression__item">
                 <label class="form__label form-impression__label">
-                  <input class="form-impression__radio" type="radio" name="impression" id="impression-3" value="difficulty">
+                  <input class="form-impression__radio visually-hidden" type="radio" name="impression" id="impression-3" value="difficulty">
+                  <span class="form-impression__indicator"></span>
                   Затрудняюсь ответить
                 </label>
               </li>
@@ -109,30 +126,34 @@
 
         <fieldset class="form__fieldset form-attractions">
           <div class="form-attractions__wrapper">
-            <legend class="form__legend form-attractions__title">Посещенные достопримечательности</legend>
-            <ul class="form__list">
-              <li class="form-attractions__item">
+            <legend class="form__legend form__legend--attractions">Посещенные достопримечательности</legend>
+            <ul class="form__list form__list--attractions">
+              <li class="form-attractions__item form-attractions__item--bridge">
                 <label class="form__label form-attractions__label">
-                  <input class="form-attractions__checkbox" type="checkbox" name="bridge" checked>
+                  <input class="form-attractions__checkbox visually-hidden" type="checkbox" name="bridge" checked>
                   Мост Дьявола
+                  <span class="form-attractions__indicator"></span>
                 </label>
               </li>
-              <li class="form-attractions__item">
+              <li class="form-attractions__item form-attractions__item--mountain">
                 <label class="form__label form-attractions__label">
-                  <input class="form-attractions__checkbox" type="checkbox" name="mountain" checked>
+                  <input class="form-attractions__checkbox visually-hidden" type="checkbox" name="mountain" checked>
                   Гора-Колокол
+                  <span class="form-attractions__indicator"></span>
                 </label>
               </li>
-              <li class="form-attractions__item">
+              <li class="form-attractions__item form-attractions__item--park">
                 <label class="form__label form-attractions__label">
-                  <input class="form-attractions__checkbox" type="checkbox" name="park" checked>
+                  <input class="form-attractions__checkbox visually-hidden" type="checkbox" name="park" checked>
                   Слайд-парк
+                  <span class="form-attractions__indicator"></span>
                 </label>
               </li>
-              <li class="form-attractions__item">
+              <li class="form-attractions__item form-attractions__item--rock">
                 <label class="form__label form-attractions__label">
-                  <input class="form-attractions__checkbox" type="checkbox" name="rock">
+                  <input class="form-attractions__checkbox visually-hidden" type="checkbox" name="rock">
                   Красные скалы
+                  <span class="form-attractions__indicator"></span>
                 </label>
               </li>
             </ul>
@@ -141,7 +162,7 @@
 
         <div class="form-review">
           <div class="form-review__wrapper">
-            <label class="form__legend form-review__title">Опишите свои эмоции:
+            <label class="form__legend form__legend--review">Опишите свои эмоции:
               <textarea class="form-review__textarea" name="review" placeholder="Опишите подробно все свои восторги">
               </textarea>
             </label>
@@ -149,6 +170,7 @@
         </div>
 
         <button class="button form__button" type="submit">Отправить отзыв</button>
+      <span class="form-note">* — обязательные поля</span>
       </form>
     </main>
 

@@ -1,10 +1,96 @@
 .form-impression__wrapper {
-  padding: 23px 36px 28px 20px;
+  width: 280px;
+  margin: 0 auto;
+  padding-top: 18px;
+}
+
+.form-impression__label {
+  position: relative;
+  display: block;
+  padding-left: 80px;
+  padding-bottom: 43px;
+}
+
+.form-impression__indicator::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: -13px;
+  left: 0;
+  width: 56px;
+  height: 56px;
+  background-color: @color_gray;
+  border-radius: 50%;
+}
+
+.form-impression__radio:checked + .form-impression__indicator::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 17px;
+  width: 22px;
+  height: 22px;
+  background-color: #000000;
+  border-radius: 50%;
+}
+
+.form-impression__radio:hover + .form-impression__indicator::before {
+  background-color: @form-color-hover;
+}
+
+.form-impression__radio:focus + .form-impression__indicator::before {
+  outline: #3b99fc auto 5px;
+  background-color: @form-color-hover;
+}
+
+.form-impression__radio:active + .form-impression__indicator::before {
+  background-color: @form-color-active;
+}
+
+.form-impression__radio:disabled + .form-impression__indicator::before {
+  background-color: #d5d5d5;
 }
 
 @media (min-width: @tablet-width) {
   .form-impression {
     width: 50%;
     order: 1;
+  }
+
+  .form-impression__wrapper {
+    position: relative;
+    width: 323px;
+    margin: 0 auto;
+    padding-top: 8px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1px;
+      height: 292px;
+      top: 13px;
+      right: 0;
+      background-color: #dbdbdb;
+    }
+  }
+
+  .form-impression__label {
+    padding-left: 74px;
+    padding-bottom: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-impression {
+    width: 480px;
+  }
+
+  .form-impression__wrapper {
+    width: 480px;
+    padding-left: 3px;
+  }
+
+  .form-impression__label {
+    padding-left: 76px;
   }
 }
