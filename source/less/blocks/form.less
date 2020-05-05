@@ -8,21 +8,51 @@
 }
 
 .form__list {
+  margin: 0;
+  margin-top: 22px;
   padding: 0;
   list-style: none;
+
+  &--contacts {
+    margin-top: 21px;
+  }
+
+  &--impression {
+    margin-top: 37px;
+  }
+
+  &--attractions {
+    margin-top: 31px;
+  }
 }
 
 .form__fieldset {
-  width: @mobile-width;
+  position: relative;
   margin: 0;
   padding: 0;
   border: none;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #e5e5e5;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .form__legend {
   .font-title();
   text-align: center;
   margin: 0 auto;
+
+  &--review {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .form__label {
@@ -40,26 +70,209 @@
   text-transform: uppercase;
 }
 
+.form-note {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
   .form {
-    width: @tablet-width;
+    width: 648px;
+    margin: 0 auto 23px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
   }
 
+  .form__fieldset {
+    &::after {
+      display: none;
+    }
+  }
+
+  .form__legend {
+    .font-title-tablet-desktop();
+    position: relative;
+    margin: 0 auto;
+
+    &--name {
+      margin: 0;
+      padding-left: 57px;
+      text-align: left;
+    }
+
+    &--attractions {
+      width: 278px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 125px;
+        height: 1px;
+        top: 25px;
+        left: -181px;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: 25px;
+        right: -188px;
+        background-color: #dbdbdb;
+      }
+    }
+
+    &--impression {
+      margin: 0;
+    }
+
+    &--contacts {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 125px;
+        height: 1px;
+        top: 13px;
+        left: -184px;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: 13px;
+        right: -186px;
+        background-color: #dbdbdb;
+      }
+    }
+
+    &--review {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 125px;
+        height: 1px;
+        top: 12px;
+        left: 0;
+        background-color: #dbdbdb;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 123px;
+        height: 1px;
+        top: 12px;
+        right: 0;
+        background-color: #dbdbdb;
+      }
+    }
+  }
+
+  .form__list {
+    &--name {
+      margin-top: 57px;
+      margin-left: 58px;
+    }
+
+    &--contacts {
+      margin-top: 24px;
+    }
+
+    &--impression {
+      margin-top: 73px;
+    }
+
+    &--attractions {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 55px;
+      margin-left: 57px;
+    }
+  }
+
   .form__button {
+    align-self: flex-start;
+    text-align: left;
     width: 324px;
+    margin-left: 0;
+    padding-left: 64px;
     order: 6;
+  }
+
+  .form-note {
+    display: block;
+    margin-top: 18px;
+    order: 7;
   }
 }
 
+
 @media (min-width: @desktop-width) {
   .form {
-    width: @desktop-width;
+    width: 960px;
+    margin: 0 auto 28px;
   }
 
   .form__button {
     width: 480px;
+    padding-left: 148px;
+  }
+
+  .form__legend {
+    &--impression {
+      padding-left: 76px;
+    }
+
+    &--name {
+      padding-left: 79px;
+    }
+
+    &--contacts {
+      &::before {
+        width: 279px;
+        top: 11px;
+        left: -341px;
+      }
+
+      &::after {
+        width: 279px;
+        top: 11px;
+        right: -341px;
+      }
+    }
+
+    &--attractions {
+      &::before {
+        width: 281px;
+        left: -341px;
+      }
+
+      &::after {
+        width: 281px;
+        left: 341px;
+      }
+    }
+  }
+
+  .form__list {
+    &--name {
+      margin-left: 80px;
+    }
+
+    &--contacts {
+      display: flex;
+      margin-top: 67px;
+    }
+
+    &--attractions {
+      margin-left: 0;
+    }
   }
 }
