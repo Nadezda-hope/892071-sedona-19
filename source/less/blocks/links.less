@@ -25,7 +25,11 @@
 }
 
 .links__copyright {
-  margin-right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 136px;
+  margin-right: -5px;
 }
 
 @media (min-width: @tablet-width) {
@@ -40,17 +44,17 @@
   }
 
   .links__social {
-    margin-bottom: 13px;
+    margin-bottom: 14px;
     margin-right: 8px;
-  }
-
-  .links__copyright {
-    margin-right: 14px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .links__wrapper {
     padding: 0 120px;
+  }
+
+  .links__copyright {
+    margin-right: -7px;
   }
 }
