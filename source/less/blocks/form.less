@@ -59,6 +59,11 @@
   .font-title();
 }
 
+.form__control {
+  width: 100%;
+  text-align: center;
+}
+
 .form__button {
   width: 280px;
   height: 58px;
@@ -180,7 +185,7 @@
     }
 
     &--contacts {
-      margin-top: 24px;
+      margin-top: 26px;
     }
 
     &--impression {
@@ -197,13 +202,19 @@
     }
   }
 
+  .form__control {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    order: 6;
+  }
+
   .form__button {
     align-self: flex-start;
     text-align: left;
     width: 324px;
     margin-left: 0;
     padding-left: 64px;
-    order: 6;
   }
 
   .form-note {
@@ -259,6 +270,16 @@
         left: 341px;
       }
     }
+
+    &--review {
+      &::before {
+        width: 281px;
+      }
+
+      &::after {
+        width: 281px;
+      }
+    }
   }
 
   .form__list {
@@ -273,6 +294,7 @@
 
     &--attractions {
       margin-left: 0;
+      margin-top: 57px;
     }
   }
 }

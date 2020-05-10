@@ -23,6 +23,8 @@
 
 .form-name__field {
   .input-text();
+  font-size: 18px;
+  line-height: 26px;
   height: @input-height;
   padding-left: 22px;
 
@@ -36,16 +38,6 @@
 
   &--patronymic {
     width: 194px;
-  }
-
-  &:hover {
-    background-color: @form-color-hover;
-  }
-
-  &:focus {
-    background-color: #ffffff;
-    border: 4px solid #e5e5e5;
-    outline: none;
   }
 }
 
@@ -69,6 +61,16 @@
 
     &--surename {
       margin-left: 15px;
+    }
+
+    &:hover {
+      background-color: @form-color-hover;
+    }
+
+    &:focus {
+      background-color: #ffffff;
+      border: 4px solid #e5e5e5;
+      outline: none;
     }
   }
 }

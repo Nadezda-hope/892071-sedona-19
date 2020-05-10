@@ -12,3 +12,5 @@ menuToggle.addEventListener('click', function() {
     menuMain.classList.remove('main-menu--opened');
   }
 });
+
+svg4everybody ();

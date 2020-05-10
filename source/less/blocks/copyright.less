@@ -1,26 +1,22 @@
 .copyright {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   font-size: 14px;
   font-weight: normal;
 }
 
 .copyright__link {
-  &:hover path {
+  align-self: flex-end;
+
+  &:hover .copyright__icon {
     fill: @color_blue;
   }
 
-  &:active path {
+  &:active .copyright__icon {
     fill: #b2b2b2;
   }
 }
 
 .copyright__icon {
-  width: 27px;
-  height: 34px;
-}
-
-.copyright__icon path {
+  width: 40px;
+  height: 40px;
   fill: #000000;
 }
