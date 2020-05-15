@@ -7,7 +7,6 @@
 .feature__list {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   width: @mobile-width;
   min-height: 416px;
   margin: 0;
@@ -23,19 +22,22 @@
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
-  padding-left: 20px;
+  padding-left: 21px;
   text-align: left;
 
   &--housing {
+    min-height: 128px;
     order: 0;
   }
 
   &--souvenir {
+    min-height: 117px;
     padding-top: 2px;
     order: 1;
   }
 
   &--food {
+    min-height: 109px;
     padding-top: 2px;
     padding-left: 18px;
     order: 2;
@@ -45,14 +47,37 @@
 .feature__icon {
   align-self: flex-start;
   fill: #81b3d2;
+
+  &--house {
+    width: 67px;
+    height: 37px;
+  }
+
+  &--souvenir {
+    width: 66px;
+    height: 37px;
+  }
+
+  &--food {
+    width: 72px;
+    height: 35px;
+  }
 }
 
 .feature__text {
-  padding-top: 10px;
   padding-left: 12px;
 
   &--souvenir {
     padding-left: 7px;
+  }
+
+  &--house {
+    padding-top: 11px;
+  }
+
+  &--food {
+    padding-top: 4px;
+    padding-left: 14px;
   }
 }
 
