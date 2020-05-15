@@ -1,17 +1,212 @@
 .video-sedona {
+  min-height: 267px;
+  margin-bottom: 39px;
+  text-align: center;
+}
+
+.video-sedona__wrapper {
+  position: relative;
+  min-height: 267px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 243px;
+    height: 3px;
+    bottom: 86px;
+    left: 42px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    width: 10px;
+    height: 10px;
+    left: 78px;
+    bottom: 83px;
+    background-color: @white;
+    border-radius: 50%;
+  }
+}
+
+.video-sedona__rewind {
+  position: absolute;
+  width: 280px;
+  height: 45px;
+  bottom: 66px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.video-sedona__preview {
+  width: 320px;
   height: 201px;
-  margin-bottom: 104px;
+}
+
+.video-sedona__control {
+  position: absolute;
+  width: 280px;
+  height: 66px;
+  bottom: 0;
+  left: 20px;
+  background-color: @color_gray;
+}
+
+.video-sedona__icon {
+  position: absolute;
+  fill: #5c6870;
+
+  &--replay {
+    top: 22px;
+    left: 25px;
+  }
+
+  &--subtitles {
+    top: 23px;
+    right: 74px;
+  }
+
+  &--fullscreen {
+    top: 23px;
+    right: 23px;
+  }
+
+  &:hover {
+    fill: #000000;
+  }
+
+  &:active {
+    fill: #b8b8b8;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .video-sedona {
-    height: 500px;
-    margin-bottom: 39px;
+    min-height: 499px;
+    margin-bottom: 35px;
+  }
+
+  .video-sedona__wrapper {
+    min-height: 499px;
+
+    &::before {
+      width: 389px;
+      bottom: 50px;
+      left: 153px;
+    }
+
+    &::after {
+      width: 9px;
+      height: 9px;
+      bottom: 47px;
+      left: 266px;
+    }
+  }
+
+  .video-sedona__preview {
+    width: 648px;
+    height: 499px;
+  }
+
+  .video-sedona__rewind {
+    width: 648px;
+    height: 92px;
+    bottom: 5px;
+    left: 60px;
+  }
+
+  .video-sedona__control {
+    width: 648px;
+    bottom: 4px;
+    left: 60px;
+    background-color: transparent;
+  }
+
+  .video-sedona__icon {
+    fill: @white;
+
+    &--replay {
+      top: 7px;
+      left: 35px;
+    }
+
+    &--subtitles {
+      top: 8px;
+      right: 92px;
+    }
+
+    &--fullscreen {
+      top: 8px;
+      right: 41px;
+    }
+
+    &:hover {
+      fill: #c2c2c2;
+    }
+
+    &:active {
+      fill: #949494;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .video-sedona {
-    margin-bottom: 84px;
+    height: 500px;
+    margin-bottom: 85px;
+  }
+
+  .video-sedona__preview {
+    width: 800px;
+    height: 500px;
+  }
+
+  .video-sedona__wrapper {
+    min-height: 500px;
+
+    &::before {
+      width: 540px;
+      bottom: 49px;
+      left: 293px;
+    }
+
+    &::after {
+      width: 9px;
+      height: 9px;
+      bottom: 46px;
+      left: 406px;
+    }
+  }
+
+  .video-sedona__rewind {
+    width: 800px;
+    bottom: 4px;
+    left: 200px;
+  }
+
+  .video-sedona__control {
+    width: 800px;
+    bottom: 4px;
+    left: 200px;
+  }
+
+  .video-sedona__icon {
+    &--replay {
+      top: 8px;
+      left: 35px;
+    }
+
+    &--subtitles {
+      top: 9px;
+      right: 94px;
+    }
+
+    &--fullscreen {
+      top: 9px;
+      right: 43px;
+    }
   }
 }

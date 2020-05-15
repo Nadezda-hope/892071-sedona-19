@@ -1,6 +1,11 @@
 .popup {
   width: @mobile-width;
+  position: fixed;
+  z-index: 2;
+  top: 200px;
+  left: calc(50% - 160px);
   margin: 0 auto;
+  background-color: @white;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
 
   &--error {
@@ -38,7 +43,7 @@
   &--button {
     width: 100%;
     min-height: 98px;
-    margin: 33px auto 0;
+    margin: 34px auto 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,8 +79,17 @@
   }
 }
 
+.popup--closed {
+  display: none;
+}
+
+.popup--opened {
+  display: block;
+}
+
 @media (min-width: @tablet-width) {
   .popup {
+    left: calc(50% - 200px);
     min-height: 347px;
     margin: 0 auto;
 
@@ -95,6 +109,8 @@
 
     &--success {
       width: 640px;
+      left: calc(50% - 320px);
+
 
       .popup__text {
         width: 414px;
@@ -116,6 +132,7 @@
 
     &--button {
       min-height: 146px;
+      margin: 35px auto 0;
     }
   }
 
