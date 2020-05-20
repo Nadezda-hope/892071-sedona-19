@@ -13,9 +13,12 @@
 }
 
 .map__img {
+  position: absolute;
   width: @mobile-width;
+  top: 0;
+  left: 0;
   margin: 0 auto;
-  z-index: 1;
+  z-index: -1;
 }
 
 .map__iframe {
@@ -24,6 +27,15 @@
   height: 350px;
   top: 0;
   left: 0;
+  z-index: 1;
+}
+
+.map__marker {
+  position: absolute;
+  width: 27px;
+  height: 27px;
+  top: 46%;
+  left: 46%;
   z-index: 2;
 }
 
@@ -31,10 +43,19 @@
   .map__img {
     width: @tablet-width;
   }
+
+  .map__marker {
+    top: 47%;
+    left: 49%;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .map__img {
     width: @desktop-width;
+  }
+
+  .map__marker {
+    top: 46%;
   }
 }
